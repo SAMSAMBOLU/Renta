@@ -34,8 +34,8 @@ class User(AbstractUser):
     email = models.EmailField(_("email"), max_length=250, unique=True)
     create_at = models.DateTimeField(auto_now_add=True)
     is_admin = models.BooleanField(default=False, verbose_name='Admin')
-    is_vendor = models.BooleanField(default=False, verbose_name='Agric Enterprise')
-    is_customer = models.BooleanField(default=False, verbose_name='Farm Customer')
+    is_vendor = models.BooleanField(default=False, verbose_name='Vendor')
+    is_customer = models.BooleanField(default=False, verbose_name='Customer')
     phone_number = models.BigIntegerField(unique=True, null=True, blank=True)
 
     REQUIRED_FIELDS = []
